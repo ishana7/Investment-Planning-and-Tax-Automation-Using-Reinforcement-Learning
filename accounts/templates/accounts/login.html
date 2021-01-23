@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Invarjan</title>
+    {% load static %}
+    <style>
+
+body{
+    background-color: #FFFFFF;
+     }
+h1,a,li{
+    color: black;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+    <div align="center" class="container">
+        <h1> </h1>
+        <p>
+<img src={% static "accounts/img/login1.png" %}>
+        </p>
+        <h2>Login</h2>
+        <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Login</button>
+            <br>
+            <br>
+             <!--p> Forgot Password? <a href={% url 'reset-password' %}> Reset Password </a></p-->
+            <p>Don't have an Account? Register Now!</p>
+            <a href="/account/register"  aria-pressed="true">Sign Up</a>
+        </form>
+    </div>
+
+{% endblock %}
+
+
+

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title> Profile </title>
+    {% load static %}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+    <br><br>
+        <section class="banner_part">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-xl-6">
+                    <div class="banner_text">
+                        <div class="banner_text_iner">
+                            <h1> Profile </h1><br>
+                            <p>
+                <form method="post">
+                <table>
+                <tr>
+                    <td>User :</td>
+                    <td><input type="text" class="form-control" align="center" value=" {{ user }} "></td>
+                </tr>
+                 <tr>
+                     <td> First Name :</td>
+                     <td><input type="text" class="form-control" align="center" value=" {{ user.first_name }} "></td>
+                 </tr>
+                    <tr>
+                     <td> Last Name :</td>
+                     <td><input type="text" class="form-control" align="center" value=" {{ user.last_name }} "></td>
+                 </tr>
+                 <tr>
+                    <td>Email Id :</td>
+                    <td><input type="text" class="form-control" align="center" value=" {{ user.email }} "></td>
+                </tr>
+                </table>
+                <br>
+                <br>
+                <a class="btn btn-outline-info my-2 my-sm-0" href="/account/profile/edit"> Edit Profile </a>
+                </form>
+            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-6">
+                    <div class="banner_text">
+                        <div class="banner_text_iner">
+                           <p><img src={% static "accounts/img/profile3.png" %}></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,81 @@
+
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tether-theme-arrows-dark.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+ {% load static %}
+    <link rel="stylesheet" href={% static "accounts/assets/css/paper-dashboard.css" %}>
+<link rel="stylesheet" href={% static "accounts/assets/css/bootstrap.min.css" %}>
+
+        {% block head %}
+        <title>Base</title>
+        {% endblock %}
+    </head>
+    <body class="light-edition">
+    <br>
+
+    <div class="container">
+ <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navbarSupportedContent">
+  <a class="navbar-brand" href="#">Invarjan</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      {% if user.is_authenticated %}
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href='/account/home'>Home <span class="sr-only">(current)</span></a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href={% url 'blog' %}>Blogs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/service/portfolio">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href={% url 'view_profile' %}>Profile</a>
+      </li>
+   <!--li class="nav-item">
+        <a class="nav-link" href={% url 'edit_profile' %}>Edit Profile</a>
+      </li-->
+        <li class="nav-item">
+        <a class="nav-link" href={% url 'change_password' %}>Change Password</a>
+      </li>
+    <!--li class="nav-item">
+        <a class="nav-link" href={% url 'reset-password' %}> Reset Password </a>
+      </li-->
+    </ul>
+     <ul class="nav navbar-nav navbar-right">
+       <li class="nav-item">
+        <a class="nav-link" href="/account/logout">Logout</a>
+      </li>
+     </ul>
+
+
+      {% else %}
+      <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href='/account/home'>Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+   <form class="form-inline my-2 my-lg-0">
+     <a href="/account/login" class="btn btn-outline-dark my-2 my-sm-0" role="button" aria-pressed="true">Sign In</a>
+    </form>
+      {% endif %}
+
+  </div>
+</nav>
+ </div>
+    <br>
+    <br>
+        {% block body %}
+                <h1> Base </h1>
+        {% endblock %}
+    </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+</html>

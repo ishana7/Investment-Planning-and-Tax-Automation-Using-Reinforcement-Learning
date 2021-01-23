@@ -1,0 +1,71 @@
+
+<html lang="en">
+<head>
+
+ <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+{% load static %}
+ <link rel="stylesheet" href={% static "services/assets/css/paper-dashboard.css" %}>
+<link rel="stylesheet" href={% static "services/assets/css/bootstrap.min.css" %}>
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <!--link href="../assets/demo/demo.css" rel="stylesheet" /-->
+
+    {% block head %}
+        <title> Service Base</title>
+    {% endblock %}
+</head>
+<body class="light-edition">
+<nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navbarSupportedContent">
+  <a class="navbar-brand" href="#">Services</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="navbar-nav mr-auto">
+
+     <li class="nav-item ">
+            <a class="nav-link" href="/service/portfolio">
+              <i class="material-icons">content_paste</i>
+              <p>Portfolio Management</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/service/taxauto">
+              <i class="material-icons">bubble_chart</i>
+              <p>Tax Automation</p>
+            </a>
+          </li>
+        <li class="nav-item ">
+            <a class="nav-link" href="{% url 'calculator' %}">
+              <i class="material-icons">gamepad</i>
+              <p>Other Services</p>
+            </a>
+          </li>
+
+    </ul>
+
+       <ul class="nav navbar-nav navbar-right">
+              <li class="nav-item">
+                <a class="nav-link" href={% url 'home' %}>
+                  <i class="material-icons">home</i>
+                  <p class="d-lg-none d-md-block">
+                    Account
+                  </p>
+                </a>
+              </li>
+       </ul>
+
+
+
+
+  </div>
+</nav>
+ </div>
+
+
+    {% block body %}
+    {% endblock %}
+</body>
+</html>

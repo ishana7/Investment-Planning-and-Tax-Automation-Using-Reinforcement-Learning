@@ -1,0 +1,25 @@
+{% extends 'servbase.html' %}
+
+{% block head %}
+<title> Edit Profile </title>
+{% endblock %}
+
+{% block body %}
+    <div align="center" class="wrapper">
+    <div  class="main-panel">
+        <br>
+        <br>
+        <h1> Edit Profile </h1>
+        <br>
+        <section>
+            <p>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit"> Submit </button>
+                </form>
+            </p>
+        </section>
+    </div>
+    </div>
+{% endblock %}

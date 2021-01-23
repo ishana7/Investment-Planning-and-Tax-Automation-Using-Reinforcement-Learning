@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% load static %}
+
+{% endblock %}
+
+
+
+{% block body %}
+
+
+
+    <!-- breadcrumb start-->
+    <section class="breadcrumb breadcrumb_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb_iner text-center">
+                        <div class="breadcrumb_iner_item">
+                            <h2>What Is AI? Complex Technology
+                                in Plain English</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb start-->
+   <!--================Blog Area =================-->
+   <section class="blog_area single-post-area section_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-8 posts-list">
+               <div class="single-post">
+                  <div class="feature-img">
+                     <img class="img-fluid" src={% static "accounts/img/blog_1.jpg" %} alt="">
+                  </div>
+                  <div class="blog_details">
+                     <h2>What Is AI? Complex Technology
+                        in Plain English
+                     </h2>
+                     <ul class="blog-info-link mt-3 mb-4">
+                        <li><a href="#"><i class="far fa-user"></i> Artificial Intelligence</a></li>
+                     </ul>
+                     <p>This fall, we&rsquo;re sharing a series of blog posts exploring AI&rsquo;s impact on highly regulated industries and the major compliance barrier that stands in the way: the &ldquo;black box&rdquo; problem.</p>
+<p>Setting up the rest of the series, this week&rsquo;s blog post provides clear explanations of core AI technology and terminology.</p>
+<h2>Artificial Intelligence, Explained</h2>
+<p>There&rsquo;s a quote from the classic science fiction writer Arthur C. Clarke that perfectly captures the modern AI phenomenon: &ldquo;Any sufficiently advanced technology is indistinguishable from magic.&rdquo; AI is about as sufficiently advanced as technology gets in the 21st century, so it should, therefore, be no big surprise when its advertised capabilities don&rsquo;t seem to have clear limitations.</p>
+<p>But, it&rsquo;s not just its inherent complexity that gives AI the appearance of unlimited potential. It&rsquo;s also due to how poorly it&rsquo;s explained.</p>
+<p>So, to help demystify humanity&rsquo;s latest magical machine, I&rsquo;ve compiled a set of clear definitions and intuitive explanations of AI&rsquo;s most important terms. As a solid grasp of AI is becoming more and more critical to everyone in the business world&mdash;let alone anyone reading this blog&mdash;I believe you&rsquo;ll find these descriptions extremely useful.</p>
+<h4>artificial intelligence (AI)</h4>
+<p><strong>(&auml;rdə&rsquo;fiSHəl in&rsquo;teləjəns) <em>noun</em></strong></p>
+<p>AI is what we use to build algorithms that solve complex problems. What&rsquo;s a complex problem? Good question. It&rsquo;s a problem where a simple relationship between inputs and outputs is difficult to create. Voice to text is a perfect example of such a problem.</p>
+<p>Imagine you&rsquo;re designing a voice to text solution. The first challenge is calibrating your system to analyze the input. The input isn&rsquo;t text: It&rsquo;s a signal, a wave&mdash;a time series. And each instance will be unique. Even the same person repeating the same word doesn&rsquo;t produce a perfectly identical, repeating pattern. As a consequence, you cannot create clean definitions for inputs or write &ldquo;if/then&rdquo; rules: If I see X and Y wave pattern, then I know that it&rsquo;s the word &ldquo;Z.&rdquo; Even if you&rsquo;re only considering inputs, you&rsquo;re looking at a complex problem.</p>
+<p>To solve your dilemma, you have to have a more sophisticated means of mapping inputs to outputs. What you need is a more flexible methodology of learning the key attributes that would allow your system to match a signal pattern to a given word. Here&rsquo;s where AI comes in. Using machine learning, you can teach your system to recognize given signal-to-word matches by letting them build a model of how they relate.</p>
+<p>First, you create (or buy) a dataset composed of input/output matches. We typically call it a &ldquo;gold standard,&rdquo; as it provides the true, human-curated mapping of inputs to outputs. In this dataset, there would be a variety of pronunciations of a particular spoken word coupled with the appropriate written word. For example, numerous audio files of the word &ldquo;helicopter&rdquo; would be labeled as inputs and matched to &ldquo;helicopter&rdquo; as a labeled text output. These input/output matches are then fed to a machine learning (ML) algorithm, which, through this training process, develops an understanding of the core features of the signal patterns that map to particular words. This understanding is known as a model, and it allows you to build voice to text applications that can deal with input variety.</p>
+<p>What I&rsquo;ve just described to you is classic ML, and it is through ML that we build applications for hard problems. While there are different types of ML (which we will get to later), this is the key approach that defines modern AI.</p>
+<h4>machine learning (ML)</h4>
+<p><strong>(mə&rsquo;&int;in &lsquo;l3rnIŋ) <em>noun</em></strong></p>
+<p><a href="https://www.rosette.com/tag/machine-learning/">Machine learning</a> is the training process we described above, but it is often used to describe what an application does after training is complete: It predicts. Training produces an understanding of the relationship between inputs and outputs, but this understanding (model) isn&rsquo;t perfect. Because of this, when an application produces outputs on the basis of that model, it&rsquo;s making a prediction. Given what it has seen, it predicts input &ldquo;X&rdquo; should be matched with output &ldquo;Y.&rdquo;</p>
+<p>This terminology might throw some people off, as we rarely think of our own judgment process in such a manner, but that isn&rsquo;t because we aren&rsquo;t making predictions. Anytime our brain attempts to recognize anything, it&rsquo;s trying to predict what that thing is. It&rsquo;s trying to match our sensory data to pre-existing conceptual patterns, and, when it comes to a perceived match, it produces an interpretation: a prediction of what something is. Sometimes we really know we&rsquo;re only guessing&mdash;memory fails or we aren&rsquo;t terribly familiar with a given pattern&mdash;but sure or uncertain, every interpretation our brain makes based on sensory data is (more or less) a prediction.</p>
+<p>Given this fact, the similarity between modern AI (ML) and our own organic intelligence should now be a little more apparent.</p>
+<h4>model</h4>
+<p><strong>(&lsquo;mad(ə)l) <em>noun</em></strong></p>
+<p>As already mentioned, a model is the output of the training process. It is the mapping between inputs and outputs that the ML algorithm has made based on the data it was given. Instead of more unfamiliar definitions, let me give you a more relatable, intuitive explanation.</p>
+<p>When you study for an exam, you could look at previous exams and memorize the question/answer pairs. This method works wonderfully&hellip;if the exam is only composed of questions that have appeared on previous tests. But, if you get asked a new question, one that didn&rsquo;t show up before, you&rsquo;re out of luck.</p>
+<p>The other, better way of studying is to look at the previous exams and create concepts from which you can generalize. Using this approach, you can handle the questions you&rsquo;ve seen before and those you haven&rsquo;t.</p>
+<p>This is a model: a general concept of how Xs relate to Ys.</p>
+<h4>natural language processing (NLP)</h4>
+<p><strong>(&lsquo;n&aelig;t&int;(ə)rəl &lsquo;l&aelig;ŋgwIdʒ &lsquo;prasesIŋ) <em>noun</em></strong></p>
+<p>AI is divided into a number of subcategories that deal with different kinds of data, and <a href="https://www.rosette.com/tag/natural-language-processing/">NLP</a> is the subcategory that focuses on computationally handling problems related to human languages.</p>
+<p>There are a large variety of NLP applications. Some are used to extract quantities, entities, or insights from large datasets: NLP helps search engines understand language and deliver meaningful search results and financial institutions sift through large numbers of financial documents to find key phrases or concepts. Others are used to transform raw information into prose: Some major newspapers now use natural language generation to produce short articles. These are just a few examples of how this AI technology is used.</p>
+<p>NLP is particularly important given how much human information is stored in language&hellip;a challenge that has grown exponentially since the arrival of the internet. There is a veritable (and ever-growing) ocean of data relevant to the everyday lives of individuals&hellip;as well as the operations of commercial and government organizations. Unfortunately, the size of the opportunity goes hand in hand with the difficulty of seizing it: Sure, there&rsquo;s a mountain of important data, but separating the relevant from refuse is the Everest of data science challenges.</p>
+<h4>structured &amp; unstructured data</h4>
+<p><strong>(&lsquo;str^kt&int;ərd ənd ^n&rsquo;str^kt&int;ərd &lsquo;d&aelig;tə) <em>noun</em></strong></p>
+<p>Structured data has some sort of a known, unambiguous order that can be easily understood. The information contained in tables, spreadsheets, taxonomies, and protocols are all examples of structured data.</p>
+<p>Unstructured data does not have a formal, clear order that can be easily understood. Unstructured doesn&rsquo;t mean &ldquo;no rules&rdquo;: Prose (hopefully) follows the rules of grammar while being unstructured. Instead, unstructured data describes information whose format is difficult for a computer to interpret&mdash;and who didn&rsquo;t find grammar a pain?</p>
+<h4>supervised &amp; unsupervised learning</h4>
+<p><strong>(&lsquo;s&uuml;pər vīzd ənd ən&rsquo;s&uuml;pər vīzd &lsquo;l3rnIŋ) <em>noun</em></strong></p>
+<p><a href="https://www.rosette.com/tag/supervised-learning/">Supervised learning</a> is the classic way ML algorithms build their models during training, and it is the process we&rsquo;ve described in every ML example so far. By feeding an ML algorithm a dataset that has labeled inputs and outputs (i.e., annotated data or &ldquo;gold standard&rdquo;), the algorithm infers the connections between inputs and outputs, allowing it to produce a model.</p>
+<p><a href="https://www.rosette.com/tag/unsupervised-learning/">Unsupervised learning</a> is also about algorithms interpreting data to produce models, but there is a twist&mdash;the data the machine trains on are not annotated. Instead, the ML algorithm identifies patterns in the data without any assistance.</p>
+<p>This approach is very good for finding and identifying new, useful patterns. For example, imagine you&rsquo;re an e-commerce giant, and you have a list of all the people that visit your website. Let&rsquo;s say you want to segment them so you can send each group a targeted newsletter. You could use conventional categories, like students, parents, etc. But what if you don&rsquo;t think those are the best possible groupings? To find optimal divisions, you could use unsupervised learning to sort the data into groups, known as clusters, based on the inherent features of that data (e.g., demographics, buying habits, previous purchases), and that data alone. This method produces an interpretation free from pre-existing ideas or biases and could help you target your newsletters to the best audience possible.</p>
+<h4>deep learning (DL)</h4>
+<p><strong>(dip &lsquo;l3rnIŋ) <em>noun</em></strong></p>
+<p><a href="https://www.rosette.com/tag/deep-learning/">Deep learning</a> is another subcategory of ML. DL models are multi-layered, neural networks, where each layer has captured a particular nuance of an input/output relationship. For example, if you were to use a deep learning approach to matching photos of dogs to the word dog, each neural net layer would add complexity (or resolution) to the features captured by the layer preceding it.</p>
+<p>For example, the first layer would capture the most general features of a photo of a dog: light, shadow, curve, etc. The next layer would add more detail to each of those general characteristics: curves become more discernible shapes, light and shadow begin to define an object. The next layer would do the same with this higher resolution interpretation until we eventually identify the entire complexity of the dog. In DL, each layer creates a more refined interpretation of the features handed down by the layer preceding it, and these layers can become incredibly dense&mdash;or deep&mdash;hence the name.</p>
+<h4>neural nets</h4>
+<p><strong>(&lsquo;nutrəl nets) <em>noun</em></strong></p>
+<p>The architecture of neural nets is inspired by the design of the human brain and is the technological backbone of the DL approach. It&rsquo;s basically a network of neurons, where the output of each individual neuron is then used as one of the inputs for the next neuron. By allowing for such sophisticated models, this design has enabled ML to tackle far more difficult tasks than was possible via traditional methods.</p>
+<h2>Conclusion</h2>
+<p>We live in an exciting time. Thanks to the accessibility of large datasets, enormous computational power, and innovative algorithms, we are finally able to train and run deep neural networks. Containing millions of interconnected neurons, these models are capable of solving problems that would have been unthinkable for AI systems just a decade ago. In this sense, the AI revolution happening right now.</p>
+<p>Because of the universal impact this revolution is having, everyone needs to understand AI basics&mdash;and they shouldn&rsquo;t have to be a data scientist to do it. It&rsquo;s my hope that this introduction to these buzzy&mdash;but vital&mdash;terms provided you with the beginning of that foundation. Armed with this advice, you&rsquo;ll not only be able to navigate the rest of this blog series with ease&hellip;you&rsquo;ll also have ample material to be more than impressive at the rest of this year&rsquo;s dinner parties.</p>
+<hr />
+<h3>About the Author</h3>
+<p>Dr. Kfir Bar is the Chief Scientist of the Basis Technology text analytics team. He has spent many years working in a wide range of natural language processing disciplines, including statistical machine translation, machine learning, ontologies, and language generation. Kfir joined Intuview in 2005 as CTO, supporting national security and counter-terrorism missions by deducing authorship, sentiment, intent, and other contextual information. In 2013, he co-founded Comprendi, which transforms big data into actionable marketing insights. Kfir lectures at three different universities in Israel where he teaches courses in computer science, digital humanities, machine translation, algorithms, and NLP. Kfir holds a Ph.D. in computer science from Tel Aviv University for a thesis on Semantics and Machine Translation.</p>
+<p>&nbsp;</p>
+<p>Ref: https://www.rosette.com/blog/ai-technology-plain-english-2/</p>
+
+    </div>
+               </div>
+
+                  <div class="navigation-area">
+                     <div class="row">
+                        <div
+                           class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
+                           <div class="thumb">
+                              <a href="#">
+
+                              </a>
+                           </div>
+                           <div class="arrow">
+                              <a href="#">
+                                 <span class="lnr text-white ti-arrow-left"></span>
+                              </a>
+                           </div>
+                           <div class="detials">
+                              <p>Prev Post</p>
+                              <a href={% url 'never-search-again' %}>
+                                 <h4>Never Search Again</h4>
+                              </a>
+                           </div>
+                        </div>
+                        <div
+                           class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+                           <div class="detials">
+                              <p>Next Post</p>
+                              <a href={% url 'ai-value-prop' %}>
+                                 <h4>AI value proposition</h4>
+                              </a>
+                           </div>
+                           <div class="arrow">
+                              <a href="#">
+                                 <span class="lnr text-white ti-arrow-right"></span>
+                              </a>
+                           </div>
+                           <div class="thumb">
+                              <a href="#">
+
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!--================Blog Area end =================-->
+
+
+
+  <!-- jquery plugins here-->
+  <!-- jquery -->
+
+{% endblock %}

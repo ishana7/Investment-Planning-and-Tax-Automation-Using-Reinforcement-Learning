@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% block head %}
+<title> Blogs </title>
+    {% load static %}
+{% endblock %}
+
+{% block body %}
+
+    <div class="container"><br>
+<h3 align="center"> BLOGS </h3>
+        <br>
+        <br>
+    <section class="banner_part">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-4 col-xl-4">
+                    <div class="single-home-blog">
+                        <div class="card">
+                            <img src={% static "accounts/img/blog_1.jpg" %} class="card-img-top" alt="blog">
+                            <div class="card-body">
+                                <a class="btn_4">Artificial Intelligence</a>
+                                <a href={% url 'what-is-ai' %}>
+                                    <h5 class="card-title">What Is AI? Complex Technology
+                                        in Plain English</h5>
+                                </a>
+                                <p>Adapted from an interview with Kfir Bar of Basis Technology</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-4">
+                    <div class="single-home-blog">
+                        <div class="card">
+                            <img src={% static "accounts/img/blog/blog_2.png" %}  class="card-img-top" alt="blog">
+                            <div class="card-body">
+                                <a class="btn_4">Business</a>
+                                <a href={% url 'ai-value-prop' %}>
+                                    <h5 class="card-title">The Essential AI Value Prop: Lower
+                                        Costs & Higher Revenue</h5>
+                                </a>
+                                <p>Adapted from an interview with Joe Sutherland of Peachtree AI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-4">
+                    <section>
+                        <br>
+                     <h4 align="center">Tax Automation - What is it?</h4>
+                      <br />
+                      <iframe width="420" height="315" src="https://www.youtube.com/embed/s-s-JIhTFj4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                      </iframe>
+                     </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-4 col-xl-4">
+                    <div class="single-home-blog">
+                        <div class="card">
+                            <img src={% static "accounts/img/blog/blog_3.png" %} class="card-img-top" alt="blog">
+                            <div class="card-body">
+                                <a class="btn_4">Finance</a>
+                                <a href={% url 'never-search-again' %}>
+                                    <h5 class="card-title">Never Search Again</h5>
+                                </a>
+                                <p>Adapted from an interview with Jason Briggs of Diffeo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-4">
+                    <div class="single-home-blog">
+                        <div class="card">
+                            <img src={% static "accounts/img/Job-Loss-Pay-Cut.jpg" %} class="card-img-top" alt="blog">
+                            <div class="card-body">
+                                <a class="btn_4">Finance</a>
+                                <a href={% url 'job-loss' %}>
+                                    <h5 class="card-title">Job Loss or Pay Cut – How to Protect & Manage your Finance?</h5>
+                                </a>
+                                <p>Corona Virus Pandemic is creating a massive impact on the economy. Many people have lost their job and many are going towards a bad phase of the pay cut.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-4">
+                    <section>
+                        <br>
+                     <h4 align="center">What is an Asset? </h4>
+                      <br />
+                      <iframe width="420" height="315" src="https://www.youtube.com/embed/GGPk43L959k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                      </iframe>
+                     </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-4 col-xl-4">
+                    <div class="single-home-blog">
+                        <div class="card">
+                            <img src={% static "accounts/img/ml-ai.jpg" %} class="card-img-top" alt="blog">
+                            <div class="card-body">
+                                <a class="btn_4">Finance</a>
+                                <a href={% url 'ml-ai' %}>
+                                    <h5 class="card-title">How explainable Machine Learning can improve the acceptance of Artificial Intelligence in Finance</h5>
+                                </a>
+                                <p>Adapted from an interview with Martin Baumann </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-4">
+                    <div class="single-home-blog">
+                        <div class="card">
+                            <img src={% static "accounts/img/dividend-taxable-budget-2020.jpg" %} class="card-img-top" alt="blog">
+                            <div class="card-body">
+                                <a class="btn_4">Finance</a>
+                                <a href={% url 'income-tax' %}>
+                                    <h5 class="card-title">Dividend Income Taxable – Should you switch to Mutual Fund Growth Option?</h5>
+                                </a>
+                                <p>Adapted from a blog post by Raviraj Parekh </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-6 col-lg-4 col-xl-4">
+                    <section>
+                        <br>
+                     <h4 align="center">What is a Liability? </h4>
+                      <br />
+                      <iframe width="420" height="315" src="https://www.youtube.com/embed/XhGriSfHLmE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                      </iframe>
+                     </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div>
+
+{% endblock %}

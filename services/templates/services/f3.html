@@ -1,0 +1,61 @@
+{% extends 'servbase.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+
+{% if alert_flag %}
+<script type ="text/javascript">
+    alert("File: file1.pdf, has been successfully uploaded at location: \media\file1.pdf")
+</script>
+{% endif %}
+
+
+       <br>
+    <br>
+ <div align="center" class="wrapper ">
+<div  class="main-panel">
+
+<section>
+    <p>
+        <h3>Tax Calculations</h3>
+    <br>
+            <form>
+                 <table>
+                    <tr>
+                        <td>Total Gross Salary of User : </td>
+                        <td>508023</td>
+                    </tr>
+                     <tr>
+                         <td> Gross Total Income of User : </td>
+                         <td>501523</td>
+                     </tr>
+                        <tr>
+                         <td> Deductable Amount : </td>
+                         <td>108000</td>
+                     </tr>
+                     <tr>
+                        <td> Income After Deduction : </td>
+                        <td>393523</td>
+                    </tr>
+                    <tr>
+                        <td> Final Payable Tax Amount : </td>
+                        <td>40532.87</td>
+                    </tr>
+                    </table>
+                    <br>
+                    <br>
+              <a href="/service/taxauto/" class="btn btn-outline-info my-2 my-sm-0" role="button" aria-pressed="true">Back to Tax Automation</a>
+
+            </form>
+    </p>
+</section>
+ </div>
+</div>
+
+
+{% endblock %}
+
+
+

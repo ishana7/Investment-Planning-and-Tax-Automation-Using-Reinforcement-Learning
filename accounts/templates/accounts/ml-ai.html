@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block head %}
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% load static %}
+
+{% endblock %}
+
+{% block body %}
+
+
+
+
+    <!-- breadcrumb start-->
+    <section class="breadcrumb breadcrumb_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb_iner text-center">
+                        <div class="breadcrumb_iner_item">
+                            <h2>How explainable Machine Learning can improve the acceptance of Artificial Intelligence in Finance</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb start-->
+   <!--================Blog Area =================-->
+   <section class="blog_area single-post-area section_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-8 posts-list">
+               <div class="single-post">
+                  <div class="feature-img">
+                     <img class="img-fluid" src={% static "accounts/img/ml-ai.jpg" %} alt="">
+                  </div>
+                  <div class="blog_details">
+                     <h2>How explainable Machine Learning can improve the acceptance of Artificial Intelligence in Finance
+                     </h2>
+                     <ul class="blog-info-link mt-3 mb-4">
+                        <li><i class="far fa-user"></i> Artificial Intelligence </a></li>
+                     </ul>
+                     <p></p>
+
+ <p>The use cases in finance for applying machine learning models to improve existing processes are numerous. During my career, I have seen many companies through the development and implementation of machine learning models in the field of risk and fraud management.</p>
+ <p>With machine learning, great new tools have been added to our <a href="https://go.arvato.se/financial-advanced-analytics-readiness.html?cid=a1:gl|a2:crm_bp_explainablemachinelearning_1906|a3:txt|a4:crm|a5:|a6:|a7:red|a8:rfr|a9:9529376tnw|eol42">analytical tool case</a> . Their popularity has been nothing but growing ever since.</p>
+<p>However, at the same time as machine learning became more widespread, the sceptic voices have also been growing. Decisions made by an algorithm are by nature opaque at first sight. To the outsider, data is put into a model, which then performs its “magic” inside a Black box and ultimately delivers a result which may seem anything between logical, illogical, helpful, unjust, or just downright cryptic.</p>
+<p>In order to spread machine learning methods even further, it is crucial to increase the ability of all stakeholders to understand and interpret the delivered results. This will boost the acceptance of artificial intelligence within organisations that use it to streamline their financial decisions, but also acceptance amongst regulatory bodies and acceptance amongst the public that is affected by the decisions made by the algorithms.The good news is: Acceptance can be increased significantly by using various approaches to make machine learning models more explainable.</p>
+<hr/>
+ <h4>Global interpretability: How the model makes decisions</h4>
+<p>First, global interpretability will help to understand the functioning of the model as a whole. Global interpretability means providing an answer to questions such as “Which features were used to build the model and how important is each feature for the result?” E.g., when using machine learning in <a href="https://finance.arvato.com/en/financial-solutions/fraud-detection/fraud-prevention.html?cid=a1:gl|a2:crm_bp_explainablemachinelearning_1906|a3:txt|a4:crm|a5:|a6:|a7:red|a8:rfr|a9:9529377xiw|eol42">fraud prevention and detection</a> , features such as a device’s metadata, user account data and personal data such as a user’s age could be taken into consideration.</p>
+<p>Each of these features may be of different importance when building a model. At the same time, the interaction of features within a model may result in a completely different picture. E.g. while user age could be of minor importance when used as a single variable by itself, the combination of user age and device data could be an interesting feature to integrate into a machine learning model for to combat <a href="https://finance.arvato.com/en/financial-solutions/fraud-detection.html?cid=a1:gl|a2:crm_bp_explainablemachinelearning_1906|a3:txt|a4:crm|a5:|a6:|a7:red|a8:rfr|a9:9529380egp|eol42">fraud</a> . <a href="https://finance-blog.arvato.com/automated-feature-engineering/?cid=a1:gl|a2:crm_bp_explainablemachinelearning_1906|a3:txt|a4:crm|a5:|a6:|a7:red|a8:rfr|a9:952938196s|eol42">Automated feature engineering</a>  may help to create new features.</p>
+<hr/>
+ <h4>Local interpretability: A single decision explained</h4>
+<p>Secondly, interpretability is of major importance on a local level. If a given user is surprised to receive goods and services only against prepayment (due to him being classified as potential fraudster), checking each feature characteristic of the model against the customer’s data and behaviour helps to explain how and why this result came about.</p>
+<p>Even though interpretability is a crucial factor for the success and acceptance of machine learning models, it is not always considered in the conception phase of a model. What is your experience with explainable machine learning? Do you use machine learning models in your organization? How are you tackling this challenge? I would love to receive an <a href="mailto:martin.baumann@arvato.com?subject=Explainable%20Machine%20Learning">email</a>  with your questions and any experiences or comments you may want to share with us.</p>
+
+<hr/>
+
+
+<p>&nbsp;</p>
+                  </div>
+               </div>
+
+                  <div class="navigation-area">
+                     <div class="row">
+                        <div
+                           class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
+                           <div class="thumb">
+                              <a href="#">
+
+                              </a>
+                           </div>
+                           <div class="arrow">
+                              <a href="#">
+                                 <span class="lnr text-white ti-arrow-left"></span>
+                              </a>
+                           </div>
+                           <div class="detials">
+                              <p>Prev Post</p>
+                              <a href={% url 'job-loss' %}>
+                                 <h4>Job Loss or Pay Cut – How to Protect & Manage your Finance?</h4>
+                              </a>
+                           </div>
+                        </div>
+                        <div
+                           class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+                           <div class="detials">
+                              <p>Next Post</p>
+                              <a href={% url 'never-search-again' %}>
+                                 <h4>Never Search Again</h4>
+                              </a>
+                           </div>
+                           <div class="arrow">
+                              <a href="#">
+                                 <span class="lnr text-white ti-arrow-right"></span>
+                              </a>
+                           </div>
+                           <div class="thumb">
+                              <a href="#">
+
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!--================Blog Area end =================-->
+
+
+  <!-- jquery plugins here-->
+  <!-- jquery -->
+
+{% endblock %}
+

@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <title>Home</title>
+     {% load static %}
+{% endblock %}
+
+{% block body %}
+<br>
+    <br>
+    <!-- banner part start-->
+    <section class="banner_part">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-xl-6">
+                    <div class="banner_text">
+                        <div class="banner_text_iner">
+                            <h5>Financial decision making is hard</h5>
+                            <h1>We are simplifying finacial decision making for you!</h1>
+                            <p>In an increasingly complex business world, automating the financial decision making process is necessary for increasing accuracy and driving efficiency. A single platform which will work as a customer assistant in providing Tax automation, Portfolio management and Investment planning completely backed by Artificial Intelligence.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-6">
+                    <div class="banner_text">
+                        <div class="banner_text_iner">
+                           <p><img src={% static "accounts/img/finance6.png" %}></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- banner part start-->
+    <br>
+    <br>
+    <!--::review_part start::-->
+    <section class="special_cource padding_top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-5">
+                    <div class="section_tittle text-center">
+
+                        <h2>Services</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6" align="center">
+                    <div class="single_special_cource">
+
+                        <div class="special_cource_text">
+
+
+                            <h3>Tax Automation</h3>
+                            <p>Automate your tax-filing procedure using our service. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" align="center">
+                    <div class="single_special_cource">
+
+                        <div class="special_cource_text">
+
+
+                             <h3>Portfolio Management </h3>
+                            <p>AI based advanced portfolio management tools to simplify your investment descion making.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--::blog_part end::-->
+    <br>
+    <br>
+    <!--::blog_part start::-->
+    <section class="blog_part section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-5">
+                    <div class="section_tittle text-center">
+
+                        <h2>Latest Posts</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-4 col-xl-4">
+                    <div class="single-home-blog">
+                        <div class="card">
+                            <img src={% static "accounts/img/blog_1.jpg" %} class="card-img-top" alt="blog">
+                            <div class="card-body">
+                                <a class="btn_4">Artificial Intelligence</a>
+                                <a href={% url 'blog' %}>
+                                    <h5 class="card-title">What Is AI? Complex Technology
+                                        in Plain English</h5>
+                                </a>
+                                <p>Adapted from an interview with Kfir Bar of Basis Technology</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-4">
+                    <div class="single-home-blog">
+                        <div class="card">
+                            <img src={% static "accounts/img/blog/blog_2.png" %}  class="card-img-top" alt="blog">
+                            <div class="card-body">
+                                <a class="btn_4">Business</a>
+                                <a href={% url 'blog' %}>
+                                    <h5 class="card-title">The Essential AI Value Prop: Lower
+                                        Costs & Higher Revenue</h5>
+                                </a>
+                                <p>Adapted from an interview with Joe Sutherland of Peachtree AI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-4">
+                    <div class="single-home-blog">
+                        <div class="card">
+                            <img src={% static "accounts/img/blog/blog_3.png" %} class="card-img-top" alt="blog">
+                            <div class="card-body">
+                                <a class="btn_4">Finance</a>
+                                <a href={% url 'blog' %}>
+                                    <h5 class="card-title">Never Search Again</h5>
+                                </a>
+                                <p>Adapted from an interview with Jason Briggs of Diffeo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--::blog_part end::-->
+
+
+{% endblock %}
+
+
+

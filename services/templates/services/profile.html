@@ -1,0 +1,46 @@
+{% extends 'servbase.html' %}
+
+{% block head %}
+<title> Profile </title>
+{% endblock %}
+
+{% block body %}
+    <div align="center" class="wrapper ">
+    <div  class="main-panel">
+        <br>
+        <br>
+        <h1> Profile </h1>
+        <br>
+        <section>
+            <p>
+                <form method="post">
+                <table>
+                <tr>
+                    <td>User :</td>
+                    <td><input type="text" class="form-control" align="center" value=" {{ user }} "></td>
+                </tr>
+                 <tr>
+                     <td> First Name :</td>
+                     <td><input type="text" class="form-control" align="center" value=" {{ user.first_name }} "></td>
+                 </tr>
+                    <tr>
+                     <td> Last Name :</td>
+                     <td><input type="text" class="form-control" align="center" value=" {{ user.last_name }} "></td>
+                 </tr>
+                 <tr>
+                    <td>Email Id :</td>
+                    <td><input type="text" class="form-control" align="center" value=" {{ user.email }} "></td>
+                </tr>
+                </table>
+                <br>
+                <br>
+                <a class="btn btn-outline-dark my-2 my-sm-0" href="/service/editprofile"> Edit Profile </a>
+                </form>
+            </p>
+        </section>
+
+    </div>
+    </div>
+
+
+{% endblock %}

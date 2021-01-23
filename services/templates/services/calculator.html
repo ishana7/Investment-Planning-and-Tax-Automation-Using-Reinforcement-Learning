@@ -1,0 +1,154 @@
+{% extends 'servbase.html' %}
+
+{% block head %}
+     <title>Top-up SIP Calculator</title>
+        <meta charset="utf-8">
+<!--        To ensure proper rendering and touch zooming-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+{% endblock %}
+
+{% block body %}
+    <br>
+    <br>
+    <section>
+        <div class="container">
+            <br>
+        <div class="container-fluid p-3 my-3 bg-dark text-white">
+            <h1>Top-up SIP Calculator</h1>
+        </div>
+
+        <div class="container row">
+            <div class="col-sm-5">
+                <form>
+                    <table>
+                        <tr>
+                            <td>Monthly Investment Amount (in Rs.)</td>
+                            <td><input type="number" min="0" max="10000000" id="total" value="1000" required></td>
+                        </tr>
+                        <tr>
+                            <td>Investment Period (in Years)</td>
+                            <td><input type="number" min="0" max="50" id="time" value="15" required></td>
+                        </tr>
+                        <tr>
+                            <td>Rate of Returns (in %)</td>
+                            <td><input type="number" min="-50" max= "50" id="rate" value="10.5" required></td>
+                        </tr>
+                         <tr>
+                            <td>Annual Increment (in Rs.)</td>
+                            <td><input type="number" min="0" max= "10000000" id="increment" value="500" required></td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <button type="button" onclick="calculateSip()">Calciulate</button>
+                                </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="col-sm-7">
+                <table>
+
+                    <tr>
+                        <td>Accumulate Amount (in Rs.)</td>
+                        <td id="sip"></td>
+                    </tr>
+                    <tr>
+                        <td>Your Investment</td>
+                        <td id="investment"></td>
+                    </tr>
+                    <tr>
+                        <td>Your Earnings</td>
+                        <td id="earnings"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="container p-3" id="resultTable"></div>
+        <div class="container pt-3 my-3 bg-white text-dark">
+            <h5>What is SIP Calculator?</h5>
+            <p>
+                SIP calculator is a free online tool, which allows the investors to calculate the returns on their mutual fund investment made through the process SIP. In today's day and age, SIP investment is considered as one of the most popular and safest choice of investment. It is specifically designed to provide potential investors with an update on their mutual fund investment. However, the definite returns obtained by a mutual fund scheme may vary based on different factors. SIP calculator does not calculate the expense ratio or exit load (if any).
+            </p>
+            <h5>Wealth Accumulation SIP versus Top-up SIP</h5>
+            <p>
+                SIP or Systematic Investment Plan undertaken over the long term helps you build your wealth. However, whem you 'Top-up' your SIP periodically, your wealth has the potential to grow even more. Use this calculator to find put how much your wealth can grow by topping up your SIP.
+            </p>
+        </div>
+            <!--div>
+                 <p>
+            <a href="" class="btn btn-outline-info my-2 my-sm-0" role="button" aria-pressed="true">Other Calculators</a>
+        </p>
+            </div-->
+        <script type="application/javascript">
+            const investmentObj = {
+              currentInvestment: 0,
+              interestRate: 0,
+              investmentTerm: 0,
+              currentAge: 25,
+              annualIncrement: 1000,
+              currency: 'INR'
+            }
+            function calculateSip() {
+
+
+                var total = document.getElementById("total").value;
+                var rate = document.getElementById("rate").value;
+                var time = document.getElementById("time").value;
+                var increment = document.getElementById("increment").value;
+
+                investmentObj.currentInvestment = total;
+                investmentObj.interestRate = rate;
+                investmentObj.investmentTerm = time;
+                investmentObj.annualIncrement = increment;
+
+                let carryForwardAmount = 0;
+                let inv = 0;
+                let updatedInvestmentObj;
+                let totalInvestment;
+                let investmentArr = [];
+
+                for (i = 1; i <= investmentObj.investmentTerm; i++) {
+                if (investmentObj.annualIncrement && (i > 1)) {
+                  investmentObj.currentInvestment = +investmentObj.currentInvestment + +investmentObj.annualIncrement;
+                  totalInvestment = investmentObj.currentInvestment * 12;
+                  inv = inv +  investmentObj.currentInvestment * 12;
+                } else {
+                  totalInvestment = investmentObj.currentInvestment * i * 12;
+                }
+                const interestEarned = Math.floor((carryForwardAmount + totalInvestment) * investmentObj.interestRate / 100);
+                const yearEndAccumulation = totalInvestment + interestEarned + carryForwardAmount;
+                investmentObj.currentAge = i > 1 ? (investmentObj.currentAge + 1) : investmentObj.currentAge;
+
+                    updatedInvestmentObj = {
+                  ...investmentObj,
+                  term: i,
+                  totalInvestment: totalInvestment,
+                  interestEarned: interestEarned,
+                  carryForwardAmount: carryForwardAmount,
+                  corpusWithCAGR: yearEndAccumulation,
+                  age: investmentObj.currentAge
+                }
+                investmentArr.push(updatedInvestmentObj);
+                carryForwardAmount = yearEndAccumulation;
+              }
+
+
+
+                document.getElementById("sip").innerHTML = "Rs. " + updatedInvestmentObj.corpusWithCAGR;
+
+                document.getElementById("investment").innerHTML = "Rs. " + inv;
+                document.getElementById("earnings").innerHTML ="Rs. " + (inv - updatedInvestmentObj.totalInvestment);
+
+            }
+        </script>
+      </div>
+    </section>
+{% endblock %}
+
+
+
+        
